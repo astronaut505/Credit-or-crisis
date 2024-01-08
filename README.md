@@ -3,7 +3,7 @@
 
 ## Project Overview
 
-The "Credit Score Classification" project aims to develop a machine learning model to classify credit scores of individuals based on a variety of financial indicators. This project is crucial for understanding creditworthiness, which can impact lending decisions in financial institutions. 
+The "Credit Score Classification" project was prepared for Machine Learning course assignment and aims to develop a machine learning model to classify credit scores of individuals based on a variety of financial indicators. This project is crucial for understanding creditworthiness, which can impact lending decisions in financial institutions. 
 
 ## Dataset
 
@@ -11,6 +11,7 @@ The dataset `train.csv` consists of 100,000 records with 28 features, including 
 
 Dataset can be found here:
 https://www.kaggle.com/datasets/parisrohan/credit-score-classification/
+Further dataset details can be found there. Dataset is well-documented.
 
 ## Methodology
 
