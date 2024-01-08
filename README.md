@@ -1,5 +1,5 @@
 
-# Credit Score Classification
+# Credit Score Classification: Credit or Crisis
 
 ## Project Overview
 
