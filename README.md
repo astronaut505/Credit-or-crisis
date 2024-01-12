@@ -70,3 +70,5 @@ The project involves several key stages:
 -   The Decision Tree has the highest training accuracy but a lower validation accuracy, suggesting some overfitting; however, it performs well in classifying the 'Good' and 'Standard' classes.
 
 **Considering all metrics, the Random Forest Classifier emerges as the most performing model. Its superior balance in precision, recall, and F1-scores across all classes, coupled with the highest validation accuracy, makes it the most reliable choice for this specific dataset and task.**
+
+P.s Notebook takes around 3 hours to run.
