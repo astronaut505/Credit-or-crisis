@@ -3,7 +3,7 @@
 
 ## Project Overview
 
-The "Credit Score Classification" project was prepared for Machine Learning course assignment and aims to develop a machine learning model to classify credit scores of individuals based on a variety of financial indicators. This project is crucial for understanding creditworthiness, which can impact lending decisions in financial institutions. 
+The "Credit Score Classification" project was prepared for Machine Learning course assignment and aims to develop a machine learning model to classify credit scores of individuals based on a variety of financial indicators. This project is crucial for understanding creditworthiness, which can impact lending decisions in financial institutions.
 
 ## Dataset
 
@@ -17,14 +17,14 @@ Further dataset details can be found there. Dataset is well-documented.
 
 The project involves several key stages:
 
-1.  **Data Cleaning and Preprocessing:** Focused on handling missing values and ensuring data quality. 
-    
+1.  **Data Cleaning and Preprocessing:** Focused on handling missing values and ensuring data quality.
+
 2.  **Exploratory Data Analysis (EDA):** Conducted small analysis to understand the distribution and relationship between various financial indicators. Removing outliers, errors and placeholders.
-    
-3.  **Feature Engineering:** Dataset was extremely large, having more than enough self explanatory columns, so I decided only add few Financial ratios. 
-    
+
+3.  **Feature Engineering:** Dataset was extremely large, having more than enough self explanatory columns, so I decided only add few Financial ratios.
+
 4.  **Model building:** Prepared the data for model training and validation by splitting it into appropriate subsets. Since there were too many outliers, given the nature of data, I decided use tree-based, outlier-resistant models. So I decided to use Random Forest Classifier, and LightGBM. Which these also allowed me to skip scaling steps.
-    
+
 
 
 ## Achievements
@@ -35,29 +35,30 @@ The project involves several key stages:
 -   Prepared the dataset effectively for model training and testing, ensuring proper data splitting.
 -   Applied advanced techniques like Random Forest and LightGBM classifiers for credit score prediction.
 
-## Performance Metrics
 
-### Model 1: Random Forest Classifier
+### Performance Metrics
 
--   **Training Set Accuracy**: 86.86%
--   **Validation Set Accuracy**: 79.18%
--   **Cross-validation Score (Mean)**: 78.46%
--   Precision, Recall, and F1-score for each class (Good, Poor, Standard) on the Validation Set:
-    -   **Good**: Precision - 72%, Recall - 76%, F1-Score - 74%
-    -   **Poor**: Precision - 78%, Recall - 80%, F1-Score - 79%
-    -   **Standard**: Precision - 82%, Recall - 80%, F1-Score - 81%
+#### Model 1: Random Forest Classifier
+-   **Training Set Accuracy:** 87.10%
+-   **Validation Set Accuracy:** 82.26%
+-   **Precision, Recall, and F1-Score for Each Class on the Validation Set:**
+    -   Good: Precision - 78%, Recall - 93%, F1-Score - 85%
+    -   Standard: Precision - 85%, Recall - 85%, F1-Score - 85%
+    -   Poor: Precision - 84%, Recall - 69%, F1-Score - 75%
 
-### Model 2: LightGBM with SMOTE
+#### Model 2: LightGBM with SMOTE
+-   **Training Set Accuracy:** 75.43%
+-   **Validation Set Accuracy:** 74.88%
+-   **Precision, Recall, and F1-Score for Each Class on the Validation Set:**
+    -   Good: Precision - 73%, Recall - 88%, F1-Score - 80%
+    -   Standard: Precision - 76%, Recall - 79%, F1-Score - 78%
+    -   Poor: Precision - 76%, Recall - 58%, F1-Score - 66%
 
--   **Training Set Accuracy**: 75.83%
--   **Validation Set Accuracy**: 75.74%
--   **Macro Average Metrics** on the Validation Set:
-    -   **Precision**: 75.99%
-    -   **Recall**: 75.71%
-    -   **F1 Score**: 75.27%
--   Precision, Recall, and F1-score for each class (Good, Poor, Standard) on the Validation Set:
-    -   **Good**: Precision - 74%, Recall - 88%, F1-Score - 80%
-    -   **Poor**: Precision - 77%, Recall - 79%, F1-Score - 78%
-    -   **Standard**: Precision - 77%, Recall - 60%, F1-Score - 68%
-
+#### Model 3: Decision Tree
+-   **Training Set Accuracy:** 88.40%
+-   **Validation Set Accuracy:** 79.97%
+-   **Precision, Recall, and F1-Score for Each Class on the Validation Set:**
+    -   Good: Precision - 82%, Recall - 88%, F1-Score - 85%
+    -   Standard: Precision - 80%, Recall - 86%, F1-Score - 83%
+    -   Poor: Precision - 77%, Recall - 66%, F1-Score - 71%
 These metrics indicate a strong performance by both models, with the Random Forest Classifier showing slightly better accuracy and balance across precision, recall, and F1-score compared to the LightGBM model.
