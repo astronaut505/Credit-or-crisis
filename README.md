@@ -38,7 +38,16 @@ The project involves several key stages:
 
 ### Performance Metrics
 
-#### Model 3: Decision Tree
+### Model 1: Logistic Regression --- OUR BASELINE
+
+-   **Training Set Accuracy:** 71.49%
+-   **Validation Set Accuracy:** 71.10%
+-   **Precision, Recall, and F1-Score for Each Class on the Validation Set:**
+    -   Good: Precision - 70%, Recall - 86%, F1-Score - 77%
+    -   Standard: Precision - 75%, Recall - 68%, F1-Score - 71%
+    -   Poor: Precision - 69%, Recall - 59%, F1-Score - 64%
+
+#### Model 2: Decision Tree
 -   **Training Set Accuracy:** 88.40%
 -   **Validation Set Accuracy:** 79.97%
 -   **Precision, Recall, and F1-Score for Each Class on the Validation Set:**
@@ -46,7 +55,7 @@ The project involves several key stages:
     -   Standard: Precision - 80%, Recall - 86%, F1-Score - 83%
     -   Poor: Precision - 77%, Recall - 66%, F1-Score - 71%
 
-#### Model 1: Random Forest Classifier
+#### Model 3: Random Forest Classifier
 -   **Training Set Accuracy:** 87.10%
 -   **Validation Set Accuracy:** 82.26%
 -   **Precision, Recall, and F1-Score for Each Class on the Validation Set:**
@@ -54,7 +63,7 @@ The project involves several key stages:
     -   Standard: Precision - 85%, Recall - 85%, F1-Score - 85%
     -   Poor: Precision - 84%, Recall - 69%, F1-Score - 75%
 
-#### Model 2: LightGBM with SMOTE
+#### Model 4: LightGBM with SMOTE
 -   **Training Set Accuracy:** 75.43%
 -   **Validation Set Accuracy:** 74.88%
 -   **Precision, Recall, and F1-Score for Each Class on the Validation Set:**
@@ -65,9 +74,10 @@ The project involves several key stages:
 
 ###The performance metrics reveal distinct strengths and weaknesses for each model.
 
+-   The Logistic Regression model shows balanced performance with a validation accuracy of 71.10%, demonstrating decent generalization. Its strongest aspect is the high recall in the 'Good' class, indicating effective identification of this category. However, the model shows relatively lower effectiveness in precisely classifying the 'Poor' class, as reflected by its lower recall and F1-score. Overall, while it performs fairly well across all classes, there is room for improvement in distinguishing the 'Poor' class more accurately.
+-   -   The Decision Tree has the highest training accuracy but a lower validation accuracy, suggesting some overfitting; however, it performs well in classifying the 'Good' and 'Standard' classes.
 -   The Random Forest Classifier demonstrates a strong balance across all classes with the highest validation accuracy of 82.26%, indicating robust generalization. Its precision and recall for the 'Good' class are particularly notable.
 -   The LightGBM model, while slightly less accurate overall, shows commendable performance, especially in identifying the 'Good' class, but it struggles more with the 'Poor' class.
--   The Decision Tree has the highest training accuracy but a lower validation accuracy, suggesting some overfitting; however, it performs well in classifying the 'Good' and 'Standard' classes.
 
 **Considering all metrics, the Random Forest Classifier emerges as the most performing model. Its superior balance in precision, recall, and F1-scores across all classes, coupled with the highest validation accuracy, makes it the most reliable choice for this specific dataset and task.**
 
