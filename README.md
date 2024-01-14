@@ -83,7 +83,7 @@ The project involves several key stages:
 -   Logistic Regression and LightGBM offer similar levels of accuracy, but Logistic Regression is simpler and might be preferred if interpretability is a key factor.
 -   The LightGBM model, while not outperforming Random Forest or Decision Tree in accuracy, provides a more balanced classification across classes
 
-**For all 4 model F1-Score for **Poor** class is lower. This is mostly because of nature of data. Given the original features we are using might be less informative or less distinctive for the 'Poor' class. 
+**For all 4 model F1-Score for **Poor** class is lower. This is mostly because of nature of data. Given the original features we are using might be less informative or less distinctive for the 'Poor' class.**
 
 
 Our models achieved promising results, but additional feature engineering could potentially enhance their performance, especially reducing the overfitting. The size and complexity of our dataset allowed for the creation of more features. However, we balanced this against the significant computational resources already required, with models taking up to 3 hours to run.
