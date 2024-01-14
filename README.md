@@ -38,47 +38,60 @@ The project involves several key stages:
 
 ### Performance Metrics
 
-### Model 1: Logistic Regression --- OUR BASELINE
 
--   **Training Set Accuracy:** 71.49%
--   **Validation Set Accuracy:** 71.10%
--   **Precision, Recall, and F1-Score for Each Class on the Validation Set:**
-    -   Good: Precision - 70%, Recall - 86%, F1-Score - 77%
-    -   Standard: Precision - 75%, Recall - 68%, F1-Score - 71%
-    -   Poor: Precision - 69%, Recall - 59%, F1-Score - 64%
+#### Model 1: Logistic Regression
+
+-   **Training Accuracy**: 71.47%
+-   **Validation Accuracy**: 71.02%
+-   Precision, Recall, F1-Score for each class:
+    -   **Good**: Precision - 70%, Recall - 86%, F1-Score - 77%
+    -   **Standard**: Precision - 74%, Recall - 68%, F1-Score - 71%
+    -   **Poor**: Precision - 69%, Recall - 59%, F1-Score - 64%
 
 #### Model 2: Decision Tree
--   **Training Set Accuracy:** 88.40%
--   **Validation Set Accuracy:** 79.97%
--   **Precision, Recall, and F1-Score for Each Class on the Validation Set:**
-    -   Good: Precision - 82%, Recall - 88%, F1-Score - 85%
-    -   Standard: Precision - 80%, Recall - 86%, F1-Score - 83%
-    -   Poor: Precision - 77%, Recall - 66%, F1-Score - 71%
+
+-   **Training Accuracy**: 88.09%
+-   **Validation Accuracy**: 80.54%
+-   Precision, Recall, F1-Score for each class:
+    -   **Good**: Precision - 81%, Recall - 89%, F1-Score - 85%
+    -   **Standard**: Precision - 82%, Recall - 85%, F1-Score - 83%
+    -   **Poor**: Precision - 77%, Recall - 66%, F1-Score - 71%
 
 #### Model 3: Random Forest Classifier
--   **Training Set Accuracy:** 87.10%
--   **Validation Set Accuracy:** 82.26%
--   **Precision, Recall, and F1-Score for Each Class on the Validation Set:**
-    -   Good: Precision - 78%, Recall - 93%, F1-Score - 85%
-    -   Standard: Precision - 85%, Recall - 85%, F1-Score - 85%
-    -   Poor: Precision - 84%, Recall - 69%, F1-Score - 75%
+
+-   **Training Accuracy**: 87.16%
+-   **Validation Accuracy**: 82.19%
+-   Precision, Recall, F1-Score for each class:
+    -   **Good**: Precision - 79%, Recall - 92%, F1-Score - 85%
+    -   **Standard**: Precision - 85%, Recall - 86%, F1-Score - 85%
+    -   **Poor**: Precision - 84%, Recall - 68%, F1-Score - 75%
 
 #### Model 4: LightGBM with SMOTE
--   **Training Set Accuracy:** 75.43%
--   **Validation Set Accuracy:** 74.88%
--   **Precision, Recall, and F1-Score for Each Class on the Validation Set:**
-    -   Good: Precision - 73%, Recall - 88%, F1-Score - 80%
-    -   Standard: Precision - 76%, Recall - 79%, F1-Score - 78%
-    -   Poor: Precision - 76%, Recall - 58%, F1-Score - 66%
+
+-   **Training Accuracy**: 75.38%
+-   **Validation Accuracy**: 75.04%
+-   Precision, Recall, F1-Score for each class:
+    -   **Good**: Precision - 73%, Recall - 88%, F1-Score - 80%
+    -   **Standard**: Precision - 76%, Recall - 79%, F1-Score - 78%
+    -   **Poor**: Precision - 76%, Recall - 58%, F1-Score - 66%
 
 
-###The performance metrics reveal distinct strengths and weaknesses for each model.
+**The performance metrics reveal distinct strengths and weaknesses for each model.**
 
--   The Logistic Regression model shows balanced performance with a validation accuracy of 71.10%, demonstrating decent generalization. Its strongest aspect is the high recall in the 'Good' class, indicating effective identification of this category. However, the model shows relatively lower effectiveness in precisely classifying the 'Poor' class, as reflected by its lower recall and F1-score. Overall, while it performs fairly well across all classes, there is room for improvement in distinguishing the 'Poor' class more accurately.
--   -   The Decision Tree has the highest training accuracy but a lower validation accuracy, suggesting some overfitting; however, it performs well in classifying the 'Good' and 'Standard' classes.
--   The Random Forest Classifier demonstrates a strong balance across all classes with the highest validation accuracy of 82.26%, indicating robust generalization. Its precision and recall for the 'Good' class are particularly notable.
--   The LightGBM model, while slightly less accurate overall, shows commendable performance, especially in identifying the 'Good' class, but it struggles more with the 'Poor' class.
+-   The Random Forest model shows the best overall performance with the highest validation accuracy and a good balance between precision, recall, and F1-score across all classes. This model appears to be the most suitable for your dataset.
+-   The Decision Tree model also performs well, especially in handling the 'Poor' class, but it's slightly inferior to Random Forest in overall accuracy and balance.
+-   Logistic Regression and LightGBM offer similar levels of accuracy, but Logistic Regression is simpler and might be preferred if interpretability is a key factor.
+-   The LightGBM model, while not outperforming Random Forest or Decision Tree in accuracy, provides a more balanced classification across classes
+
+
+Our models achieved promising results, but additional feature engineering could potentially enhance their performance, especially reducing the overfitting. The size and complexity of our dataset allowed for the creation of more features. However, we balanced this against the significant computational resources already required, with models taking up to 3 hours to run.
+
+Given these computational constraints, we focused on optimizing existing features rather than extensively expanding them.
+
+## Sumarry
 
 **Considering all metrics, the Random Forest Classifier emerges as the most performing model. Its superior balance in precision, recall, and F1-scores across all classes, coupled with the highest validation accuracy, makes it the most reliable choice for this specific dataset and task.**
+
+It's also important to consider the context of our application: If interpretability is important for the given task, Logistic Regression might be preferred despite its lower performance. If the highest possible accuracy on our validation set is the priority, Random Forest is the best choice.
 
 P.s Notebook takes around 3 hours to run.
